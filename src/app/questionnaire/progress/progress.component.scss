@@ -1,0 +1,9 @@
+::ng-deep #custom-progress > div > div > div > div{
+    background-color: #e6e6e6;
+    height: 19px;
+}
+
+::ng-deep #custom-progress > div > div > div > div > div{
+    height: 19px !important;   
+}
+
