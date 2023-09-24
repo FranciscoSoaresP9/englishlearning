@@ -8,9 +8,10 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
 import { NzImageModule } from 'ng-zorro-antd/image';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [NzStepsModule, NzGridModule, NzInputModule, NzButtonModule, NzProgressModule, NzImageModule],
+  imports: [NzStepsModule, NzGridModule, NzInputModule, NzButtonModule, NzProgressModule, NzImageModule,  FormsModule],
   declarations: [
     QuestionnaireComponent,
     ProgressComponent,

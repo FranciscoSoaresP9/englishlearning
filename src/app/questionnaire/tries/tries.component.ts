@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tries',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./tries.component.scss']
 })
 export class TriesComponent {
-
+  @Input('tries')
+  tries: number = 0
 }

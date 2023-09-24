@@ -1,13 +1,13 @@
 <div>
     <div class="w-28 float-right" nz-row>
         <div nz-col nzSpan="8">
-            <img nz-image width="25px" height="30px" nzSrc="/assets/empty-heart.png" alt=""/> 
+            <img nz-image width="25px" height="30px" [nzSrc]="tries >=1 ? '/assets/filled-heart.png' : '/assets/empty-heart.png'" alt=""/> 
         </div>
         <div nz-col nzSpan="8">
-            <img nz-image width="25px" height="30px" nzSrc="/assets/filled-heart.png" alt=""/>
+            <img nz-image width="25px" height="30px" [nzSrc]="tries >=2 ? '/assets/filled-heart.png' : '/assets/empty-heart.png'" alt=""/> 
         </div>
         <div nz-col nzSpan="8">
-            <img nz-image width="25px" height="30px" nzSrc="/assets/filled-heart.png" alt=""/>
+            <img nz-image width="25px" height="30px" [nzSrc]="tries >=3 ? '/assets/filled-heart.png' : '/assets/empty-heart.png'" alt=""/> 
         </div>
     </div>
 </div>

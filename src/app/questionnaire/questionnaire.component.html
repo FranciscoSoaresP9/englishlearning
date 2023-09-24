@@ -1,13 +1,13 @@
 <div nz-row>
-  <div nz-col nzSpan="12"><app-progress></app-progress></div>
-  <div nz-col nzSpan="12"><app-tries></app-tries></div>
+  <div nz-col nzSpan="12"><app-progress [progress] = "calculateProgress()"></app-progress></div>
+  <div nz-col nzSpan="12"><app-tries [tries]="tries"></app-tries></div>
   <div nz-col class="mt-10 text-lg font-semibold" nzSpan="24">Traduz a frase</div>
-  <div nz-col class="mt-2" nzSpan="24">How are you</div>
+  <div nz-col class="mt-2" nzSpan="24">{{currentSentece ? currentSentece.enSentece : 'Finished'}}</div>
   <div nz-col class="mt-5" nzSpan="24">
-    <textarea rows="4" nz-input></textarea>
+    <textarea  [(ngModel)]="answer" rows="4" nz-input></textarea>
   </div>
   <div nz-col nzSpan="24" class="mt-20">
-    <button class="float-right" nz-button nzType="primary">Primary Button</button>
+    <button [disabled]="!currentSentece" class="float-right" (click)="save()" nz-button nzType="primary">Next</button>
   </div>
 </div>
 <div nz-row>
